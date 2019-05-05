@@ -47,4 +47,24 @@ public class LibraryTest {
         assertThat(librarySizeTwice, is(4));
         verify(librarySpy, times(2)).size();
     }
+          
+    @Test
+    public void checkPriceTest() {
+        Library library = mock(Library.class);
+        
+        when(library.checkBookPrice("운영체제")).thenReturn("38000");
+        assertThat(library.checkBookPrice("운영체제"), is("38000"));
+        verify(library).checkBookPrice(anyString());
+   }
+    
+   @Test
+    public void checkPublisherTest() {
+        Library library = mock(Library.class);
+        
+        when(library.checkPublisher("운영체제")).thenReturn("교보문고");
+        assertThat(library.checkPublisher("운영체제"), is(""));
+        verify(library).checkPublisher(anyString());
+    }
+
+    
 }

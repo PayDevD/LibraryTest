@@ -10,6 +10,8 @@ public class Book {
     private String ISBN;
     private int pages;
     private String author;
+    private int price;
+    private String pub;
     private List<Integer> bookMarks;
     private List<String> famousLines;
 
@@ -35,17 +37,4 @@ public class Book {
         famousLines.add(famousLine);
         return famousLine;
     }
-    
-    public void checkBookPrice(int price) { 
-	    price.add(price);
-	    return price;
-    }
-
-
-    public void checkPublisher(String pub) {
-	    price.add(pub);
-	    return pub;
-    }
-
-    
 }

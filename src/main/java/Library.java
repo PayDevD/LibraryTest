@@ -29,6 +29,17 @@ public class Library {
         return null;
     }
 
+    public int checkBookPrice(String title) {
+        Book book = findByTitle(title);
+        return book.getPrice();
+    }
+
+
+    public String checkPublisher(String title) {
+        Book book = findByTitle(title);
+        return book.getPublisher();
+    }
+    
     public int size() {
         return books.size();
     }
