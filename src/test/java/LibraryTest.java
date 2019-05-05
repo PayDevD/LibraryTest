@@ -36,7 +36,7 @@ public class LibraryTest {
 
     @Test
     public void checkLibrarySizeTwice() {
-        Library library = new Library(new LinkedList<>());
+        Library library = new Library(new LinkedList<Book>());
         Library librarySpy = spy(library);
 
         librarySpy.addBook(new Book("Book1", 402, "John"));
@@ -52,8 +52,8 @@ public class LibraryTest {
     public void checkPriceTest() {
         Library library = mock(Library.class);
         
-        when(library.checkBookPrice("운영체제")).thenReturn("38000");
-        assertThat(library.checkBookPrice("운영체제"), is("38000"));
+        when(library.checkBookPrice("운영체제")).thenReturn(38000);
+        assertThat(library.checkBookPrice("운영체제"), is(38000));
         verify(library).checkBookPrice(anyString());
    }
     
@@ -62,7 +62,7 @@ public class LibraryTest {
         Library library = mock(Library.class);
         
         when(library.checkPublisher("운영체제")).thenReturn("교보문고");
-        assertThat(library.checkPublisher("운영체제"), is(""));
+        assertThat(library.checkPublisher("운영체제"), is("교보문고"));
         verify(library).checkPublisher(anyString());
     }
 

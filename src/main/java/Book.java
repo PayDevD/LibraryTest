@@ -11,7 +11,7 @@ public class Book {
     private int pages;
     private String author;
     private int price;
-    private String pub;
+    private String publisher;
     private List<Integer> bookMarks;
     private List<String> famousLines;
 
